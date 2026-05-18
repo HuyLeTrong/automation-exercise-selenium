@@ -18,7 +18,7 @@ def test_login_page_create_account(driver, base_url):
     assert driver.current_url == f"{base_url}/login"
 
     page.signup_name("Tester H")
-    page.signup_email("copak40626@dardr.com") #use unique email each time, generate with https://temp-mail.org/en/
+    page.signup_email("9c3q5@wshu.net") #use unique email each time, generate with https://internxt.com/temporary-email
     page.click_signup()
 
     WebDriverWait(driver, 10).until(EC.url_contains("/signup"))
