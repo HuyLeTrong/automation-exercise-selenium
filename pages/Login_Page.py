@@ -3,6 +3,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+from pages.Signup_Page import SignUpPage
+
 class LoginPage:
     # Locators
     EMAIL_INPUT    = (By.CSS_SELECTOR, 'input[data-qa="login-email"]')
@@ -29,6 +31,7 @@ class LoginPage:
 
     def click_signup(self):
         self.wait.until(EC.element_to_be_clickable(self.SIGNUP_BUTTON)).click()
+        return SignUpPage(self.driver, self.base_url)
 
     def enter_email(self, email):
         self.wait.until(EC.visibility_of_element_located(self.EMAIL_INPUT)).send_keys(email)
