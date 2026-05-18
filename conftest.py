@@ -1,10 +1,12 @@
 # conftest.py
 import pytest
+import sys
 import os
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 BASE_URL = "https://automationexercise.com"
+sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
 
 @pytest.fixture(scope="function")
 def driver():
