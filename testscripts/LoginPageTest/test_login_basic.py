@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 
 from selenium.webdriver.support import expected_conditions as EC
 
-from testscripts.pages.Login_Page import LoginPage
+from pages.Login_Page import LoginPage
 
 def test_login_page_loads(driver, base_url):
     page = LoginPage(driver, base_url)
